@@ -31,18 +31,38 @@
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a id="aboutNavButton" class="nav-link" href="#">About</a>
                     </li>
                 </ul>
             </div>
         </div>        
     </div>
 
-    <div class="container" id="temp">
-        <div class="alert alert-primary" role="alert">
-            omg look at me i have a website
+    <div id="backgroundPic" class="container-fluid">
+
+        <div id="topLineSpan">
+             hi. <span id="paddingText">i'm zack.</span>
         </div>
+
+        <h2>there will be stuff here soon.</h2>
+        <button type="button" id="moreButton" class="btn btn-dark">more</button>
+        <button type="button" id="secretButton" class="btn btn-dark" disabled>this button makes me look professional</button>
+
     </div>
+
+    <script>
+        let aboutButton = document.querySelector("#aboutNavButton");
+        aboutButton.onclick = function() {
+            this.innerHTML = "the about page is a lie";
+        }
+
+        let moreButton = document.querySelector("#moreButton");
+        moreButton.onclick = function() {
+            document.querySelector("h2").innerHTML = "i said soon."
+            moreButton.style.display = "none";
+            document.querySelector("#secretButton").style.display = "block";
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
